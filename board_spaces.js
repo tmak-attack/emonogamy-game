@@ -1,6 +1,16 @@
 /**
  * Board Spaces Configuration for (e)MOnogamy Game
  * 
+ * INTEGRATION NOTE: For visual board rendering with grid coordinates,
+ * see positionMap.js which provides:
+ * - 10x10 grid position mapping (MONOPOLY_POSITION_MAP)
+ * - getCoordinatesFromIndex(index) - converts board index to [row, col]
+ * - calculateMove(currentIndex, spaces) - handles movement with wraparound
+ * - renderGridWithMapping() - debug visualization of the board layout
+ * 
+ * Use positionMap.js to render tokens on a visual board grid while using
+ * this file's BOARD_SPACES array for game logic and space properties.
+ * 
  * ╔═══════════════════════════════════════════════════════════════════════════╗
  * ║                         ASCII BOARD LAYOUT (40 SPACES)                   ║
  * ║                                                                           ║
